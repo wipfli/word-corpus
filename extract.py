@@ -53,5 +53,5 @@ def extract(folder, filename, encoding):
         executor.map(run, *zip(*input_values))
 
 # extract(folder='osm', filename='planet-latest.osm', encoding='utf-8')
-# extract(folder='wikidata', filename='latest-all.json', encoding='unicode_escape')
-extract(folder='wikipedia', filename='wikipedia.txt', encoding='utf-8')
+extract(folder='wikidata', filename='latest-all.json', encoding='unicode_escape')
+#extract(folder='wikipedia', filename='wikipedia.txt', encoding='utf-8')
