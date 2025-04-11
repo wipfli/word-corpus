@@ -76,21 +76,31 @@ def filter_by_script(folder, script_name, unicode_ranges):
 
 
 
-script_name = 'devanagari'
-unicode_ranges = {
-    'Devanagari': {'first_including': 0x0900, 'last_including': 0x097F},
-    'Devanagari Extended': {'first_including': 0xA8E0, 'last_including': 0xA8FF},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+# script_name = 'devanagari'
+# unicode_ranges = {
+#     'Devanagari': {'first_including': 0x0900, 'last_including': 0x097F},
+#     'Devanagari Extended': {'first_including': 0xA8E0, 'last_including': 0xA8FF},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
 
 
-script_name = 'myanmar'
+# script_name = 'myanmar'
+# unicode_ranges = {
+#     'Myanmar': {'first_including': 0x1000, 'last_including': 0x109F},
+#     'Myanmar Extended-B': {'first_including': 0xA9E0, 'last_including': 0xA9FF},
+#     'Myanmar Extended-A': {'first_including': 0xAA60, 'last_including': 0xAA7F},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'khmer'
 unicode_ranges = {
-    'Myanmar': {'first_including': 0x1000, 'last_including': 0x109F},
-    'Myanmar Extended-B': {'first_including': 0xA9E0, 'last_including': 0xA9FF},
-    'Myanmar Extended-A': {'first_including': 0xAA60, 'last_including': 0xAA7F},
+    'Khmer': {'first_including': 0x1780, 'last_including': 0x17FF},
+    'Khmer Symbols': {'first_including': 0x19E0, 'last_including': 0x19FF}
 }
 filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
 filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)

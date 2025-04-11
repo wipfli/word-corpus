@@ -28,6 +28,10 @@ Download corpus for a single script without duplicates:
   * [osm-myanmar-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/osm-myanmar-corpus.txt.zip) (206K)
   * [wikipedia-myanmar-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikipedia-myanmar-corpus.txt.zip) (28M)
   * [wikidata-myanmar-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikidata-myanmar-corpus.txt.zip) (594K)
+* Khmer
+  * [osm-khmer-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/osm-khmer-corpus.txt.zip) (73K)
+  * [wikipedia-khmer-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikipedia-khmer-corpus.txt.zip) (12M)
+  * [wikidata-khmer-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikidata-khmer-corpus.txt.zip) (137K)
 
 If you need some other language or script, please open an Issue on GitHub...
 
