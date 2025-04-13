@@ -97,10 +97,83 @@ def filter_by_script(folder, script_name, unicode_ranges):
 # filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
 
 
-script_name = 'khmer'
+# script_name = 'khmer'
+# unicode_ranges = {
+#     'Khmer': {'first_including': 0x1780, 'last_including': 0x17FF},
+#     'Khmer Symbols': {'first_including': 0x19E0, 'last_including': 0x19FF}
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'bengali'
+# unicode_ranges = {
+#     'Bengali': {'first_including': 0x0980, 'last_including': 0x09FF},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'gurmukhi'
 unicode_ranges = {
-    'Khmer': {'first_including': 0x1780, 'last_including': 0x17FF},
-    'Khmer Symbols': {'first_including': 0x19E0, 'last_including': 0x19FF}
+    'Gurmukhi': {'first_including': 0x0A00, 'last_including': 0x0A7F},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'telugu'
+unicode_ranges = {
+    'Telugu': {'first_including': 0x0C00, 'last_including': 0x0C7F},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'tamil'
+unicode_ranges = {
+    'Tamil': {'first_including': 0x0B80, 'last_including': 0x0BFF},
+    'Tamil Supplement': {'first_including': 0x11FC0, 'last_including': 0x11FFF},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'gujarati'
+unicode_ranges = {
+    'Gujarati': {'first_including': 0x0A80, 'last_including': 0x0AFF},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'kannada'
+unicode_ranges = {
+    'Kannada': {'first_including': 0x0C80, 'last_including': 0x0CFF},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'oriya'
+unicode_ranges = {
+    'Oriya': {'first_including': 0x0B00, 'last_including': 0x0B7F},
+}
+filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+script_name = 'malayalam'
+unicode_ranges = {
+    'Malayalam': {'first_including': 0x0D00, 'last_including': 0x0D7F},
 }
 filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
 filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
