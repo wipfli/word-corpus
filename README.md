@@ -20,6 +20,10 @@ Download corpus with duplicates. These files contain only non-Latin/Greek/Cyrill
 
 Download corpus for a single script without duplicates:
 
+* Arabic
+  * [osm-arabic-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/osm-arabic-corpus.txt.zip) (2M)
+  * [wikipedia-arabic-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikipedia-arabic-corpus.txt.zip) (80M)
+  * [wikidata-arabic-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikidata-arabic-corpus.txt.zip) (10M)
 * Bengali
   * [osm-bengali-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/osm-bengali-corpus.txt.zip) (79K)
   * [wikipedia-bengali-corpus.txt.zip](https://pub-726b01260c98468a9387cc0dfcb7386b.r2.dev/wikipedia-bengali-corpus.txt.zip) (22M)

@@ -16,17 +16,10 @@ def get_mask(unicode_ranges):
 
 def get_words(mask, folder, script_name):
 
-    words = []
+    words = set({})
 
     def add(word):
-        index = bisect_left(words, word)
-
-        if index < len(words) and words[index] == word:
-            # word already in words, do nothing
-            pass
-        else:
-            # word not yet in words, add it
-            insort(words, word)
+        words.add(word)
 
     current_word = ''
 
@@ -54,7 +47,7 @@ def get_words(mask, folder, script_name):
             add(current_word)
             current_word = ''
     
-    return words
+    return list(words)
 
 
 def filter_by_script(folder, script_name, unicode_ranges):
@@ -116,64 +109,79 @@ def filter_by_script(folder, script_name, unicode_ranges):
 # filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
 
 
-script_name = 'gurmukhi'
+# script_name = 'gurmukhi'
+# unicode_ranges = {
+#     'Gurmukhi': {'first_including': 0x0A00, 'last_including': 0x0A7F},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'telugu'
+# unicode_ranges = {
+#     'Telugu': {'first_including': 0x0C00, 'last_including': 0x0C7F},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'tamil'
+# unicode_ranges = {
+#     'Tamil': {'first_including': 0x0B80, 'last_including': 0x0BFF},
+#     'Tamil Supplement': {'first_including': 0x11FC0, 'last_including': 0x11FFF},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'gujarati'
+# unicode_ranges = {
+#     'Gujarati': {'first_including': 0x0A80, 'last_including': 0x0AFF},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'kannada'
+# unicode_ranges = {
+#     'Kannada': {'first_including': 0x0C80, 'last_including': 0x0CFF},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'oriya'
+# unicode_ranges = {
+#     'Oriya': {'first_including': 0x0B00, 'last_including': 0x0B7F},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+
+# script_name = 'malayalam'
+# unicode_ranges = {
+#     'Malayalam': {'first_including': 0x0D00, 'last_including': 0x0D7F},
+# }
+# filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
+# filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
+
+script_name = 'arabic'
 unicode_ranges = {
-    'Gurmukhi': {'first_including': 0x0A00, 'last_including': 0x0A7F},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'telugu'
-unicode_ranges = {
-    'Telugu': {'first_including': 0x0C00, 'last_including': 0x0C7F},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'tamil'
-unicode_ranges = {
-    'Tamil': {'first_including': 0x0B80, 'last_including': 0x0BFF},
-    'Tamil Supplement': {'first_including': 0x11FC0, 'last_including': 0x11FFF},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'gujarati'
-unicode_ranges = {
-    'Gujarati': {'first_including': 0x0A80, 'last_including': 0x0AFF},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'kannada'
-unicode_ranges = {
-    'Kannada': {'first_including': 0x0C80, 'last_including': 0x0CFF},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'oriya'
-unicode_ranges = {
-    'Oriya': {'first_including': 0x0B00, 'last_including': 0x0B7F},
-}
-filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
-filter_by_script(folder='wikidata', script_name=script_name, unicode_ranges=unicode_ranges)
-
-
-script_name = 'malayalam'
-unicode_ranges = {
-    'Malayalam': {'first_including': 0x0D00, 'last_including': 0x0D7F},
+    'Arabic': {'first_including':  0x0600, 'last_including': 0x06FF},
+    'Arabic Supplement': {'first_including':  0x0750, 'last_including': 0x077F},
+    'Arabic Extended-B': {'first_including':  0x0870, 'last_including': 0x089F},
+    'Arabic Extended-A': {'first_including':  0x08A0, 'last_including': 0x08FF},
+    'Arabic Presentation Forms-A': {'first_including':  0xFB50, 'last_including': 0xFDFF},
+    'Arabic Presentation Forms-B': {'first_including':  0xFE70, 'last_including': 0xFEFF},
+    'Arabic Extended-C': {'first_including': 0x10EC0, 'last_including':0x10EFF},
+    'Arabic Mathematical Alphabetic Symbols': {'first_including': 0x1EE00, 'last_including':0x1EEFF},
 }
 filter_by_script(folder='osm', script_name=script_name, unicode_ranges=unicode_ranges)
 filter_by_script(folder='wikipedia', script_name=script_name, unicode_ranges=unicode_ranges)
